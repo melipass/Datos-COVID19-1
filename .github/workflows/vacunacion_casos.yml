@@ -1,0 +1,38 @@
+name: Actualiza_incidencia_vacunacion
+
+on:
+    push:
+        branches: master
+        paths: 'input/Vacunacion/*.csv'
+    workflow_dispatch:
+
+jobs:
+  Actualiza_producto_89_y_90:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+          python-version: 3.7
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: generate product 90
+      run: |
+          cd src
+          python vacunacion_casos.py
+
+    - uses: stefanzweifel/git-auto-commit-action@v4.1.1
+      with:
+        commit_message: "Added data from campaña de vacunacion"
+        file_pattern: output/*/*.csv
+        repository: .
+        commit_user_name: MinCiencia GitHub Actions Bot
+        commit_user_email: actions@github.com
+        commit_author: minciencia github bot <actions@github.com>
