@@ -1,5 +1,5 @@
 semana_epidemiologica,sin_vac_casos,una_dosis_casos,dos_dosis_casos,dos_dosis_comp_casos,dosis_unica_casos,dosis_unica_comp_casos,dosis_ref_comp_casos,sin_vac_uci,una_dosis_uci,dos_dosis_uci,dos_dosis_comp_uci,dosis_unica_uci,dosis_unica_comp_uci,dosis_ref_comp_uci,sin_vac_fall,una_dosis_fall,dos_dosis_fall,dos_dosis_comp_fall,dosis_unica_fall,dosis_unica_comp_fall,dosis_ref_comp_fall,personas_con_una_dosis,personas_con_pauta_completa,personas_con_refuerzo
-1,28385,22,0,0,0,0,0,554,0,0,0,0,0,0,518,0,0,0,0,0,0,10709.0,0.0,0.0
+1,27385,22,0,0,0,0,0,554,0,0,0,0,0,0,518,0,0,0,0,0,0,10709.0,0.0,0.0
 2,28288,17,0,0,0,0,0,650,0,0,0,0,0,0,564,0,0,0,0,0,0,13810.0,8371.0,0.0
 3,28726,93,1,0,0,0,0,690,2,0,0,0,0,0,585,1,0,0,0,0,0,57005.0,8376.0,0.0
 4,25464,160,0,0,0,0,0,562,2,0,0,0,0,0,529,3,0,0,0,0,0,57043.0,10414.0,0.0
