@@ -3,7 +3,9 @@ name: Actualiza_incidencia_vacunacion
 on:
     push:
         branches: master
-        paths: 'input/Vacunacion/*.csv'
+        paths:
+            - 'input/Vacunacion/*.csv'
+            - 'output/producto76/vacunacion_t.csv'
         
 jobs:
   Actualiza_producto_89_y_90:
