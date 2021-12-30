@@ -23,16 +23,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: generate product 90
+    - name: Generate product 80 and 90
       run: |
           cd src
           python vacunacion_casos.py
-
+          
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+    
     - uses: stefanzweifel/git-auto-commit-action@v4.1.1
       with:
-        commit_message: "Added data from campaña de vacunacion"
+        commit_message: "Balance incidencia en vacunados ${{ steps.date.outputs.date }}"
+        
         file_pattern: output/*/*.csv
+        
         repository: .
+        
         commit_user_name: MinCiencia GitHub Actions Bot
         commit_user_email: actions@github.com
         commit_author: minciencia github bot <actions@github.com>
